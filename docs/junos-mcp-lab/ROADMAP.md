@@ -8,11 +8,20 @@ Tres publicaciones, propuesta de frecuencia semanal **dependiente de validacione
 
 **Estado:** texto y resultados disponibles; faltan última revisión de datos sensibles, autorización para publicar y validación externa de los scripts Plug & Play.
 
-## #2 — MCP multiplataforma: MX, ACX y vRR
+## #2 — MCP multiplataforma: MX, ACX, PTX y cRPD
 
-**Alcance:** facts y compatibilidad, RIB/FIB, PFE, next-hop hierarchy, NX/NHDB según plataforma, ConnectionPool, batch, serial baseline y rendimiento.
+**Alcance:** validar las cuatro plataformas con el mismo MCP oficial, sin modificar `jmcp.py`. Los vRR ya probados sirven como línea base adicional.
 
-**Evidencia pendiente:** mediciones repetidas, tests reales en MX/ACX, sintaxis PFE específica por equipo y permisos de la cuenta. No atribuir mejoras de rendimiento sin datos comparables.
+| Plataforma | Foco de análisis | Límite de interpretación |
+| --- | --- | --- |
+| MX | BGP/MPLS, RIB/FIB, PFE, NHDB, composite/indirect next-hops | Depende de hardware y release |
+| ACX | Junos Evolved, IS-IS/SR-MPLS, RIB/FIB, interfaces y PFE | Comandos PFE/ASIC dependen del modelo |
+| PTX | Backbone MPLS, rutas instaladas, PFE y contadores de forwarding | Validar variantes de sintaxis por plataforma |
+| cRPD | BGP, IGP, políticas, Route Reflection, RIB y resolución | cRPD independiente es control plane; no asumir PFE físico |
+
+**Pruebas comunes:** facts, versiones, conectividad/autenticación NETCONF, lectura BGP/IGP, compatibilidad de RPC, fallas de herramienta, tiempos (serial y batch), ConnectionPool y seguridad efectiva. **Pruebas específicas de forwarding** solo donde exista PFE o se integre un forwarding plane verificable. En cRPD, comprobar control plane y distinguir si se ejecuta como componente de Juniper Cloud-Native Router.
+
+**Evidencia pendiente:** pruebas de MX/ACX/PTX/cRPD, compatibilidad por modelo/release, mediciones repetidas y baseline serial, NHDB/next-hop hierarchy, errores de PFE y permisos. No afirmar aceleraciones ni paridad de capacidades sin evidencia.
 
 ## #3 — Troubleshooting avanzado Service Provider
 
