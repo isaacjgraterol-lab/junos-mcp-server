@@ -10,7 +10,7 @@ Documentación pública del laboratorio **Windows 11 + VS Code + GitHub Copilot 
 
 1. [Instalación reproducible en Windows 11](windows11/README.md) — pasos, scripts auxiliares y troubleshooting.
 2. [Resultados de laboratorio](evidencias/RESULTADOS.md) — qué validamos y qué sigue pendiente.
-3. [Publicación #1: borrador y material editorial](publicaciones/01-windows11-copilot-junos-mcp.md).
+3. [Publicación #1: artículo completo listo para LinkedIn](publicaciones/01-articulo-linkedin-completo.md) y [versión breve](publicaciones/01-windows11-copilot-junos-mcp.md).
 4. [Roadmap de 3 publicaciones](ROADMAP.md).
 5. [Seguridad y publicación responsable](SEGURIDAD.md).
 
