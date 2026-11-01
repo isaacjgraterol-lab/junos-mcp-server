@@ -86,6 +86,16 @@ El comando `set system services netconf ssh` sería un **cambio de configuració
 
 ## Automatización auxiliar
 
-Un kit local de scripts PowerShell se preparó para reducir pasos repetitivos, pero **aún requiere validación en una instalación Windows 11 limpia**. Por eso el procedimiento manual anterior es la referencia pública reproducible hasta completar esas pruebas.
+Se incluyen tres scripts auxiliares en [scripts/](scripts/). **Todavía requieren una prueba integral en una instalación Windows 11 limpia**: el procedimiento manual anterior sigue siendo la referencia del laboratorio.
+
+Después de instalar Git, Python y VS Code, ubícate en la carpeta de scripts y ejecuta:
+
+~~~powershell
+.\01_Instalar_MCP.ps1
+.\02_Agregar_Router.ps1 -RouterAlias LAB-RTR-01 -Address 192.0.2.10 -Username netconf-readonly -AuthMode SSHKey -PrivateKeyPath "$env:USERPROFILE\.ssh\id_ed25519"
+.\03_Validar_NETCONF.ps1 -RouterAlias LAB-RTR-01
+~~~
+
+**Notas:** sustituye la IP de documentación, usuario y ruta de clave por valores autorizados. Con `-AuthMode Password`, el script pregunta la contraseña localmente sin escribirla en el historial, **pero la conserva en texto claro dentro de devices.json**; nunca publiques ese archivo. Los scripts no modifican la configuración Junos y no deshabilitan políticas de seguridad de PowerShell.
 
 Fuente: https://github.com/Juniper/junos-mcp-server
