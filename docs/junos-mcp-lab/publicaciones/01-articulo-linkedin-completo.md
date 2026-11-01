@@ -80,7 +80,7 @@ El XML facilitó obtener estructuras que se prestan al parsing. Estas cifras **n
 
 El valor no está solo en ejecutar comandos: es poder consultar un equipo real, obtener una respuesta verificable y utilizar la IA para **priorizar qué revisar**. Copilot pudo distinguir una llamada MCP exitosa de un estado BGP anómalo. La interpretación técnica continúa siendo responsabilidad del ingeniero.
 
-El siguiente reto será comprobar las diferencias entre **MX, ACX y vRR**, continuar hasta RIB/FIB/PFE y analizar ConnectionPool y batch con metodologías comparables. Más adelante, en la tercera entrega, veremos LSP creados por políticas **BGP-SRTE**, y **stitching/interdomain con BGP-CT y BGP-LU**, correlacionando control plane y forwarding.
+El siguiente reto será comprobar las diferencias entre **MX, ACX, PTX y cRPD**, utilizando los vRR ya probados como referencia. Analizaremos RIB/FIB, PFE y next-hop hierarchy donde la plataforma tenga un plano de forwarding verificable; en cRPD estudiaremos el control plane. También mediremos ConnectionPool y batch con metodologías comparables. Más adelante, en la tercera entrega, veremos LSP creados por políticas **BGP-SRTE**, y **stitching/interdomain con BGP-CT y BGP-LU**, correlacionando control plane y forwarding.
 
 ## Recursos y límites
 
