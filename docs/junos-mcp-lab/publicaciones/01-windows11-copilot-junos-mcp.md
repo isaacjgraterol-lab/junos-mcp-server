@@ -23,7 +23,7 @@ Lo interesante fue usar la IA para estructurar las salidas, señalar sesiones no
 **Evidencias:** [Resultados resumidos](../evidencias/RESULTADOS.md).  
 **Origen:** https://github.com/Juniper/junos-mcp-server
 
-Siguiente episodio: MX, ACX y vRR; RIB, FIB, PFE, next-hops, ConnectionPool y batch.
+Siguiente episodio: MX, ACX, PTX y cRPD (con vRR como referencia); RIB, FIB/PFE donde aplique, next-hops, ConnectionPool y batch.
 
 #Juniper #Junos #MCP #GitHubCopilot #NETCONF #NetworkAutomation #ServiceProvider #AIOps
 
