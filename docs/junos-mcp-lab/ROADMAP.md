@@ -6,7 +6,7 @@ Tres publicaciones, propuesta de frecuencia semanal **dependiente de validacione
 
 **Alcance:** instalación paso a paso, arquitectura, inventario, herramientas MCP, ACX, dos vRR, interpretación BGP y primer batch multi-router.
 
-**Estado:** texto y resultados disponibles; faltan última revisión de datos sensibles, autorización para publicar y validación externa de los scripts Plug & Play.
+**Estado:** publicación #1 compartida por el autor en LinkedIn: https://lnkd.in/p/eZNPFfqy (enlace recibido el 22-11-2026). Los scripts Plug & Play siguen pendientes de validación integral en Windows 11 limpio.
 
 ## #2 — MCP multiplataforma: MX, ACX, PTX y cRPD
 
@@ -21,7 +21,7 @@ Tres publicaciones, propuesta de frecuencia semanal **dependiente de validacione
 
 **Pruebas comunes:** facts, versiones, conectividad/autenticación NETCONF, lectura BGP/IGP, compatibilidad de RPC, fallas de herramienta, tiempos (serial y batch), ConnectionPool y seguridad efectiva. **Pruebas específicas de forwarding** solo donde exista PFE o se integre un forwarding plane verificable. En cRPD, comprobar control plane y distinguir si se ejecuta como componente de Juniper Cloud-Native Router.
 
-**Evidencia pendiente:** pruebas de MX/ACX/PTX/cRPD, compatibilidad por modelo/release, mediciones repetidas y baseline serial, NHDB/next-hop hierarchy, errores de PFE y permisos. No afirmar aceleraciones ni paridad de capacidades sin evidencia.
+**Estado actualizado (informado por el autor el 22-11-2026):** ya se ejecutaron pruebas con MX, ACX y PTX; cRPD sigue pendiente. Faltan incorporar y analizar en la documentación las salidas anonimizadas y su compatibilidad por modelo/release; siguen pendientes mediciones repetidas, baseline serial, NHDB/next-hop hierarchy, pruebas PFE y permisos. No afirmar aceleraciones ni paridad de capacidades sin evidencia.
 
 ## #3 — Troubleshooting avanzado Service Provider
 
